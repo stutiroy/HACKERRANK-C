@@ -1,0 +1,21 @@
+struct triangle
+{
+	int a;
+	int b;
+	int c;
+};
+
+typedef struct triangle triangle;
+
+int heron(triangle *t) {
+    int sum = t->a + t->b + t->c;
+    return sum * (sum - 2 * t->a) * (sum - 2 * t->b) * (sum - 2 * t->c);
+}
+
+int heron_comp(const void *a, const void *b) {
+    return heron((triangle *) a) - heron((triangle *) b);
+}
+
+void sort_by_area(triangle *tr, int n) {
+    qsort(tr, n, sizeof(*tr), heron_comp);
+}
