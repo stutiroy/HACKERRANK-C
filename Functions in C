@@ -1,0 +1,31 @@
+#include <stdio.h>
+int max_of_four(int q,int w,int e,int r)
+{
+    int max;
+    if(q>w && q>e && q>r)
+    {
+        max=q;
+    }
+    else if(w>q && w>e && w>r)
+    {
+        max=w;
+    }
+    else if(e>q && e>w && e>r)
+    {
+        max=e;
+    }
+    else  {
+    max=r;
+    }
+    return max;
+}
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
+}
+
