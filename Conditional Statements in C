@@ -1,0 +1,46 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+
+
+int main()
+{
+   int k;
+   scanf("%d",&k);
+   if(k<=9)
+   {
+       if(k==1)
+       printf("one");
+       else if(k==2)
+       printf("two");
+        else if(k==3)
+       printf("three");
+        else if(k==4)
+       printf("four");
+        else if(k==5)
+       printf("five");
+        else if(k==6)
+       printf("six");
+        else if(k==7)
+       printf("seven");
+       else if(k==8)
+       printf("eight");
+       else {
+       printf("nine");
+       }
+   } 
+   else  {
+   printf("Greater than 9");
+   }
+
+    return 0;
+}
